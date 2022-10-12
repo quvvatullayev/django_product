@@ -9,3 +9,6 @@ class Product(models.Model):
     memory = models.TextField()
     price = models.TextField()
     img_url = models.TextField()
+
+    def __str__(self) -> str:
+        return self.name
