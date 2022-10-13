@@ -8,6 +8,14 @@ def home(request):
 
 def add(request):
     p = request.POST
-    db = Product(name=p.get("name"), company=p.get('company'), color=p.get('color'), RAM=p.get('RAM'), memory=p.get('memory'), price=p.get('price'), img_url=p.get('img_url'))
+    db = Product(
+        name=p.get("name"),
+        company=p.get('company'),
+        color=p.get('color'),
+        RAM=p.get('RAM'),
+        memory=p.get('memory'),
+        price=p.get('price'),
+        img_url=p.get('img_url')
+        )
     db.save()
-    return JsonResponse({})
+    return HttpResponse('<h1>tayyor</h1>')
